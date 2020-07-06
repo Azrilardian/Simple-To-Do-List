@@ -39,15 +39,15 @@ body,
 
 body,
 .container {
-    margin: auto;
-    height: 100vh;
-    width: 100%;
     background-color: rgb(12, 21, 44);
+}
+
+.container {
+    margin: 100px 0;
 }
 
 .adding-list-container {
     align-items: unset;
-    margin: 100px 0 0;
 }
 
 
@@ -186,6 +186,8 @@ h2 {
     user-select: none;
     z-index: 99;
     padding-bottom: 8px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .alert.active {
@@ -221,10 +223,10 @@ h2 {
 
 @keyframes scale {
     from {
-        transform: scale(0.85);
+        transform: translateY(-50%) scale(0.85);
     }
     to {
-        transform: scale(1);
+        transform: translateY(-50%) scale(1);
     }
 }
 
@@ -236,4 +238,29 @@ h2 {
     min-height: 70px;
     overflow: hidden;
     padding: 8px;
+}
+
+@media (max-width: 480px) {
+    .adding-list-container {
+        width: 90%;
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .list-container {
+        width: 90%;
+    }
+    .add {
+        width: 100%;
+    }
+    .list {
+        min-width: unset;
+        width: 100%;
+    }
+    .alert {
+        width: 90%;
+    }
 }
