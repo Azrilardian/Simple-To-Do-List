@@ -1,0 +1,239 @@
+html,
+body * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:is(input, button, select, textarea) :focus {
+    outline: none !important;
+    border: none !important;
+}
+
+input,
+button,
+select,
+textarea {
+    border: none;
+    outline: none;
+    height: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+body,
+.adding-list-container,
+.add,
+.list-container,
+.list,
+.list p,
+.button,
+.category::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+.container {
+    margin: auto;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(12, 21, 44);
+}
+
+.adding-list-container {
+    align-items: unset;
+    margin: 100px 0 0;
+}
+
+
+/*? UNTUK TAMBAH LIST */
+
+.add,
+.category,
+.list {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.add {
+    height: 40px;
+    width: 250px;
+    margin-right: 30px;
+}
+
+.add input {
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+}
+
+.add button {
+    width: 50px;
+    background-color: #d1d1d1;
+    font-size: 20px;
+}
+
+.add button:hover {
+    background-color: #adadad;
+}
+
+.category {
+    position: relative;
+    height: 40px;
+    width: 150px;
+    background-color: white;
+}
+
+.category::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background-color: #d1d1d1;
+    pointer-events: none;
+    font-size: 13px;
+}
+
+.category:hover::after {
+    background-color: #adadad;
+}
+
+.category::after,
+.add button {
+    transition: .3s ease;
+}
+
+.category select {
+    width: 100%;
+    border-radius: 0;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+
+/*? DAFTAR LIST  */
+
+.list-container {
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.list {
+    background-color: white;
+    justify-content: space-between;
+    height: 45px;
+    min-width: 430px;
+    margin-bottom: 17px;
+}
+
+.list.loading {
+    opacity: .7;
+}
+
+.list p {
+    height: 100%;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.list .button {
+    height: 100%;
+}
+
+.list .button button {
+    width: 45px;
+    font-size: 11px;
+    z-index: 2;
+}
+
+.list .button button:first-child {
+    background-color: #9aff9a;
+}
+
+.list .button button:last-child {
+    background-color: #ff6666;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    user-select: none;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+
+/*? REMOVE ALERT  */
+
+.alert {
+    position: absolute;
+    width: 400px;
+    background-color: white;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+    z-index: 99;
+    padding-bottom: 8px;
+}
+
+.alert.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    animation: scale .2s ease-in-out;
+}
+
+.alert p {
+    padding: 8px;
+}
+
+.alert header {
+    background-color: #d1d1d1;
+    padding: 8px;
+}
+
+.alert button {
+    width: 60px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.alert button:nth-child(3) {
+    margin-left: 8px;
+}
+
+.remove-list-alert button:nth-child(3),
+.edit-list-alert button:last-child {
+    background-color: #ff5858;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.85);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/*? EDIT LIST ALERT  */
+
+.edit-list-alert textarea {
+    width: 100%;
+    min-height: 70px;
+    overflow: hidden;
+    padding: 8px;
+}

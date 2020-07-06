@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6163288e05.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/v4-shims.min.css">
+    <title>Simple To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="adding-list-container">
+            <div class="add">
+                <input type="text" placeholder="Buat rencana hari ini !" autofocus>
+                <button>+</button>
+            </div>
+            <div class="category">
+                <select>
+                    <option value="semua">Semua</option>
+                    <option value="olahraga">Olahraga</option>
+                    <option value="pelajaran">Pelajaran</option>
+                    <option value="liburan">Liburan</option>
+                </select>
+            </div>
+        </div>
+        <div class="list-container"></div>
+    </div>
+    <div class="remove-list-alert alert">
+        <header>DELETE</header>
+        <p>Are you sure want to delete ? </p>
+        <button id="delete">YES</button>
+        <button id="no">NO</button>
+    </div>
+    <div class="edit-list-alert alert">
+        <header>EDIT</header>
+        <textarea class="editable"></textarea>
+        <button id="save">SAVE</button>
+        <button id="cancel">CANCEL</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
