@@ -6,11 +6,6 @@ body * {
     font-family: "Poppins", sans-serif;
 }
 
-:is(input, button, select, textarea) :focus {
-    outline: none !important;
-    border: none !important;
-}
-
 input,
 button,
 select,
@@ -39,11 +34,12 @@ body,
 
 body,
 .container {
-    background-color: rgb(12, 21, 44);
+    background-color: #0c152c;
 }
 
 .container {
-    margin: 100px 0;
+    margin: 70px 0;
+    width: 450px;
 }
 
 .adding-list-container {
@@ -53,17 +49,24 @@ body,
 
 /*? UNTUK TAMBAH LIST */
 
+h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .add,
-.category,
 .list {
     border-radius: 3px;
     overflow: hidden;
 }
 
-.add {
+.add,
+.list {
     height: 40px;
-    width: 250px;
-    margin-right: 30px;
+    width: 100%;
 }
 
 .add input {
@@ -76,48 +79,11 @@ body,
     width: 50px;
     background-color: #d1d1d1;
     font-size: 20px;
+    transition: .3s ease;
 }
 
 .add button:hover {
     background-color: #adadad;
-}
-
-.category {
-    position: relative;
-    height: 40px;
-    width: 150px;
-    background-color: white;
-}
-
-.category::after {
-    content: "\25BC";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 100%;
-    background-color: #d1d1d1;
-    pointer-events: none;
-    font-size: 13px;
-}
-
-.category:hover::after {
-    background-color: #adadad;
-}
-
-.category::after,
-.add button {
-    transition: .3s ease;
-}
-
-.category select {
-    width: 100%;
-    border-radius: 0;
-    appearance: none;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    padding: 0 8px;
 }
 
 
@@ -131,8 +97,6 @@ body,
 .list {
     background-color: white;
     justify-content: space-between;
-    height: 45px;
-    min-width: 430px;
     margin-bottom: 17px;
 }
 
@@ -153,7 +117,6 @@ body,
 .list .button button {
     width: 45px;
     font-size: 11px;
-    z-index: 2;
 }
 
 .list .button button:first-child {
@@ -162,14 +125,6 @@ body,
 
 .list .button button:last-child {
     background-color: #ff6666;
-}
-
-h2 {
-    font-size: 30px;
-    text-align: center;
-    user-select: none;
-    letter-spacing: 2px;
-    opacity: .8;
 }
 
 
@@ -186,7 +141,7 @@ h2 {
     user-select: none;
     z-index: 99;
     padding-bottom: 8px;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
