@@ -71,7 +71,7 @@ function list() {
     const listElement = () => {
         return `<p>${ListValue.value}</p>
         <div class="button">
-            <button class="done"><i class="fas fa-pen"></i></button>
+            <button class="done"><i class="fas fa-check"></i></button>
             <button class="remove"><i class="fas fa-trash"></i></button>
         </div>`
     };
