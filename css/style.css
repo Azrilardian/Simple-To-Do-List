@@ -173,6 +173,6 @@ h2 {
 
 @media (max-width: 400px) {
     .container {
-        min-width: 380px;
+        min-width: 360px;
     }
 }
