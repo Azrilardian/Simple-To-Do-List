@@ -57,7 +57,6 @@ body,
     padding: 0 10px;
     user-select: none;
     min-width: 500px;
-    background-color: royalblue;
 }
 
 .adding-list-container {
@@ -172,8 +171,8 @@ h2 {
     background-color: #ff8080;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .container {
-        min-width: 400px;
+        min-width: 380px;
     }
 }
