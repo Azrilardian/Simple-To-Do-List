@@ -7,32 +7,28 @@
     <script src="https://kit.fontawesome.com/6163288e05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/all.min.css">
     <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/v4-shims.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
     <title>Simple To Do List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h2>SIMPLE TO DO LIST</h2>
+        <h2>Simple To Do List</h2>
         <div class="adding-list-container">
             <div class="add">
-                <input type="text" placeholder="Buat rencana hari ini !" autofocus>
-                <button>+</button>
+                <input type="text" placeholder="Make plan today !" autofocus>
+                <button><i class="fas fa-plus-square"></i></button>
+            </div>
+            <div class="fillter">
+                <select>
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
             </div>
         </div>
         <div class="list-container"></div>
-    </div>
-    <div class="remove-list-alert alert">
-        <header>DELETE</header>
-        <p>Are you sure want to delete ? </p>
-        <button id="delete">YES</button>
-        <button id="no">NO</button>
-    </div>
-    <div class="edit-list-alert alert">
-        <header>EDIT</header>
-        <textarea class="editable"></textarea>
-        <button id="save">SAVE</button>
-        <button id="cancel">CANCEL</button>
     </div>
 
     <script src="js/script.js"></script>

@@ -6,10 +6,31 @@ body * {
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    background: linear-gradient(90deg, #085f91, #2a7bbd);
+}
+
+i {
+    pointer-events: none;
+}
+
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+select:hover {
+    background-color: #ebebeb;
+}
+
 input,
-button,
-select,
-textarea {
+button {
     border: none;
     outline: none;
     height: 100%;
@@ -22,24 +43,19 @@ button {
 body,
 .adding-list-container,
 .add,
+.fillter,
 .list-container,
 .list,
-.list p,
-.button,
-.category::after {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-body,
-.container {
-    background-color: #0c152c;
-}
-
 .container {
     margin: 70px 0;
-    width: 450px;
+    user-select: none;
+    min-width: 500px;
 }
 
 .adding-list-container {
@@ -50,15 +66,17 @@ body,
 /*? UNTUK TAMBAH LIST */
 
 h2 {
-    font-size: 18px;
-    font-weight: 500;
+    font-family: 'Seaweed Script', cursive;
+    font-size: 30px;
     color: white;
+    font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .add,
-.list {
+.list,
+.fillter {
     border-radius: 3px;
     overflow: hidden;
 }
@@ -72,18 +90,33 @@ h2 {
 .add input {
     width: 100%;
     padding: 8px;
-    background-color: white;
 }
 
 .add button {
     width: 50px;
-    background-color: #d1d1d1;
+    background-color: white;
     font-size: 20px;
     transition: .3s ease;
+    color: #2a7bbd;
 }
 
 .add button:hover {
-    background-color: #adadad;
+    background-color: #ebebeb;
+}
+
+.fillter {
+    position: relative;
+    background-color: white;
+    margin-left: 10px;
+    width: 175px;
+}
+
+.fillter::after {
+    content: "\25BC";
+    pointer-events: none;
+    position: absolute;
+    right: 6%;
+    color: #2a7bbd;
 }
 
 
@@ -97,10 +130,20 @@ h2 {
 .list {
     background-color: white;
     justify-content: space-between;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
+    transition: .2s ease;
 }
 
-.list.loading {
+.list.removed {
+    opacity: 0;
+}
+
+.list.completed {
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.loading {
     opacity: .7;
 }
 
@@ -120,102 +163,9 @@ h2 {
 }
 
 .list .button button:first-child {
-    background-color: #9aff9a;
+    background-color: #a1ffa1;
 }
 
 .list .button button:last-child {
-    background-color: #ff6666;
-}
-
-
-/*? REMOVE ALERT  */
-
-.alert {
-    position: absolute;
-    width: 400px;
-    background-color: white;
-    border-radius: 3px;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    user-select: none;
-    z-index: 99;
-    padding-bottom: 8px;
-    top: 40%;
-    transform: translateY(-50%);
-}
-
-.alert.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    animation: scale .2s ease-in-out;
-}
-
-.alert p {
-    padding: 8px;
-}
-
-.alert header {
-    background-color: #d1d1d1;
-    padding: 8px;
-}
-
-.alert button {
-    width: 60px;
-    height: 35px;
-    margin-top: 15px;
-}
-
-.alert button:nth-child(3) {
-    margin-left: 8px;
-}
-
-.remove-list-alert button:nth-child(3),
-.edit-list-alert button:last-child {
-    background-color: #ff5858;
-}
-
-@keyframes scale {
-    from {
-        transform: translateY(-50%) scale(0.85);
-    }
-    to {
-        transform: translateY(-50%) scale(1);
-    }
-}
-
-
-/*? EDIT LIST ALERT  */
-
-.edit-list-alert textarea {
-    width: 100%;
-    min-height: 70px;
-    overflow: hidden;
-    padding: 8px;
-}
-
-@media (max-width: 480px) {
-    .adding-list-container {
-        width: 90%;
-        margin: 0;
-    }
-    .container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    .list-container {
-        width: 90%;
-    }
-    .add {
-        width: 100%;
-    }
-    .list {
-        min-width: unset;
-        width: 100%;
-    }
-    .alert {
-        width: 90%;
-    }
+    background-color: #ff8080;
 }
