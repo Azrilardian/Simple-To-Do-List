@@ -47,6 +47,7 @@ function list() {
             ListValue.focus();
         }
     }
+
     const createList = () => {
         const listContainer = document.querySelector('.list-container');
         const div = document.createElement('div');
