@@ -1,43 +1,43 @@
 html,
 body * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: linear-gradient(90deg, #085f91, #2a7bbd);
+	background: linear-gradient(90deg, #085f91, #2a7bbd);
 }
 
 i {
-    pointer-events: none;
+	user-select: none;
 }
 
 select {
-    appearance: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-    cursor: pointer;
-    transition: .3s ease;
+	appearance: none;
+	border: none;
+	outline: none;
+	width: 100%;
+	height: 100%;
+	padding: 0 10px;
+	cursor: pointer;
+	transition: 0.3s ease;
 }
 
 select:hover {
-    background-color: #ebebeb;
+	background-color: #ebebeb;
 }
 
 input,
 button {
-    border: none;
-    outline: none;
-    height: 100%;
+	border: none;
+	outline: none;
+	height: 100%;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 body,
@@ -47,132 +47,147 @@ body,
 .list-container,
 .list,
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .container {
-    margin: 70px 0;
-    padding: 0 10px;
-    user-select: none;
-    min-width: 500px;
+	margin: 70px 0;
+	padding: 0 10px;
+	user-select: none;
+	min-width: 500px;
 }
 
 .adding-list-container {
-    align-items: unset;
+	align-items: unset;
 }
-
 
 /*? UNTUK TAMBAH LIST */
 
 h2 {
-    font-family: 'Seaweed Script', cursive;
-    font-size: 30px;
-    color: white;
-    font-weight: 500;
-    margin-bottom: 20px;
-    text-align: center;
+	font-family: "Seaweed Script", cursive;
+	font-size: 30px;
+	color: white;
+	font-weight: 500;
+	margin-bottom: 20px;
+	text-align: center;
 }
 
 .add,
 .list,
 .fillter {
-    border-radius: 3px;
-    overflow: hidden;
+	border-radius: 3px;
+	overflow: hidden;
 }
 
 .add,
 .list {
-    height: 40px;
-    width: 100%;
+	height: 40px;
+	width: 100%;
 }
 
 .add input {
-    width: 100%;
-    padding: 8px;
+	width: 100%;
+	padding: 8px;
 }
 
 .add button {
-    width: 50px;
-    background-color: white;
-    font-size: 20px;
-    transition: .3s ease;
-    color: #2a7bbd;
+	width: 50px;
+	background-color: white;
+	font-size: 20px;
+	transition: 0.3s ease;
+	color: #2a7bbd;
 }
 
 .add button:hover {
-    background-color: #ebebeb;
+	background-color: #ebebeb;
 }
 
 .fillter {
-    position: relative;
-    background-color: white;
-    margin-left: 10px;
-    width: 175px;
+	position: relative;
+	background-color: white;
+	margin-left: 10px;
+	width: 175px;
 }
 
 .fillter::after {
-    content: "\25BC";
-    pointer-events: none;
-    position: absolute;
-    right: 6%;
-    color: #2a7bbd;
+	content: "\25BC";
+	pointer-events: none;
+	position: absolute;
+	right: 6%;
+	color: #2a7bbd;
 }
-
 
 /*? DAFTAR LIST  */
 
 .list-container {
-    flex-direction: column;
-    margin-top: 30px;
+	flex-direction: column;
+	margin-top: 30px;
 }
 
 .list {
-    background-color: white;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    transition: .2s ease;
+	background-color: white;
+	justify-content: space-between;
+	margin-bottom: 15px;
+	transition: 0.2s ease;
 }
 
 .list.removed {
-    opacity: 0;
+	opacity: 0;
 }
 
 .list.completed {
-    text-decoration: line-through;
-    opacity: .5;
+	text-decoration: line-through;
+	opacity: 0.5;
 }
 
 .loading {
-    opacity: .7;
+	opacity: 0.7;
 }
 
 .list p {
-    height: 100%;
-    font-size: 14px;
-    padding: 10px;
+	height: 100%;
+	font-size: 14px;
+	padding: 10px;
 }
 
 .list .button {
-    height: 100%;
+	height: 100%;
 }
 
 .list .button button {
-    width: 45px;
-    font-size: 11px;
+	width: 45px;
+	font-size: 11px;
 }
 
 .list .button button:first-child {
-    background-color: #a1ffa1;
+	background-color: #a1ffa1;
 }
 
 .list .button button:last-child {
-    background-color: #ff8080;
+	background-color: #ff8080;
 }
 
-@media (max-width: 400px) {
-    .container {
-        min-width: 360px;
-    }
+@media screen and (max-width: 564px) {
+	.container {
+		min-width: 400px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.container {
+		min-width: 380px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		min-width: 280px;
+		padding: 0 20px;
+	}
+
+	.container h2 {
+		font-size: 20px;
+	}
 }

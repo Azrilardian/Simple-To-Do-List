@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/6163288e05.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../../Assets/fontawesome 5.13.0/css/all.min.css" />
+		<link rel="stylesheet" href="../../Assets/fontawesome 5.13.0/css/v4-shims.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet" />
+		<title>Simple To Do List</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/6163288e05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/all.min.css">
-    <link rel="stylesheet" href="../../fontawesome-free-5.13.0-web/css/v4-shims.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
-    <title>Simple To Do List</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+	<body>
+		<div class="container">
+			<h2>Simple To Do List</h2>
+			<div class="adding-list-container">
+				<div class="add">
+					<input type="text" placeholder="Make plan today !" autofocus />
+					<button><i class="fas fa-plus-square"></i></button>
+				</div>
+				<div class="fillter">
+					<select>
+						<option value="all">All</option>
+						<option value="completed">Completed</option>
+						<option value="uncompleted">Uncompleted</option>
+					</select>
+				</div>
+			</div>
+			<div class="list-container"></div>
+		</div>
 
-<body>
-    <div class="container">
-        <h2>Simple To Do List</h2>
-        <div class="adding-list-container">
-            <div class="add">
-                <input type="text" placeholder="Make plan today !" autofocus>
-                <button><i class="fas fa-plus-square"></i></button>
-            </div>
-            <div class="fillter">
-                <select>
-                    <option value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
-            </div>
-        </div>
-        <div class="list-container"></div>
-    </div>
-
-    <script src="js/script.js"></script>
-</body>
-
+		<script src="js/script.js"></script>
+	</body>
 </html>
